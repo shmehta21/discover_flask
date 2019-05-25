@@ -53,7 +53,7 @@ def home():
 		return redirect(url_for('home.home'))
 
 	else:
-		posts = db.session.query(BlogPost).all()
+		posts = BlogPost.query.filter_by(author_id=current_user.id)
 		return render_template('index.html', posts=posts, form=form, error=error)
 
 @home_blueprint.route('/welcome')

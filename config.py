@@ -9,7 +9,7 @@ class DevelopmentConfig(BaseConfig):
 	DEBUG = True
 
 class ProductionConfig(BaseConfig):
-	DEBUG = True
+	DEBUG = False
 
 
 
